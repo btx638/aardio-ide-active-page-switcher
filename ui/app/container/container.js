@@ -17,13 +17,16 @@ export class Container extends Element{
             </div>
         </div>
     }
+    renderItem(list){
+        return <div class="path-container">
+            {list.map((item) => <li key={item.path} class="file-item" name="file-item" value={item.path}>{item.name}</li>)}
+        </div>
+    }
     renderList(){
         let ret = []
         for (const dir in this.pathList) {
             ret.push(<div class="dir">{dir}</div>)
-            this.pathList[dir].map((item) => {
-                ret.push(<li key={item.path} class="file-item" name="file-item" value={item.path}>{item.name}</li>)
-            })
+            ret.push(this.renderItem(this.pathList[dir]))
         }
         return ret;
     }

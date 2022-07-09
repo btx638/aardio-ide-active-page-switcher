@@ -23,16 +23,21 @@
         padding:5px;
     }
 
+    :root .path-container{
+        flow:h-flow;
+    }
+
     :root li.file-item{
         behavior:radio;
-        margin:5px;
+        margin:8px;
         padding:5px;
         border-radius:5px;
         font-size:1.5em;
+        background: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
     }
 
     :root li.file-item:hover{
-        background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        background: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 50%);
         
     }
 
