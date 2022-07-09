@@ -1,0 +1,17 @@
+@set formFooter{
+
+    :root{
+        margin-top:15px;
+        padding-top:15px;
+        white:*;
+        height:50px;
+    }
+    :root > *{
+        margin:*;
+        width:max-content;
+    }
+
+    :root [cmd]{
+        background-color:red;
+    }
+}

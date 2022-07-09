@@ -1,0 +1,76 @@
+@set hTabs{
+  :root 
+  {
+    size:*;
+    font:system;
+    display:block;
+    flow:vertical;
+    background: none;
+  }
+  
+  :root > strip /* the tab strip */
+  {
+    display: block;
+    flow: horizontal;
+    width: *;
+  }
+  
+  :root > strip > label /* all tab labels, passive by default */
+  {
+    display:block;
+    font-size:20px;
+    text-align:center;
+    color: #000;
+    padding: 0px 15px;
+
+  }
+
+  :root > strip > label:hover /* 鼠标经过 */
+  {
+   
+  }
+  
+  :root > strip > label:current /*active tab*/
+  {
+    
+  }
+
+  :root > strip > label span.title /* 标签文本 */
+  {
+    display: inline-block;
+    width: max-content; 
+    padding:10px 5px;
+    color:#A9A9A9;
+  }
+
+  :root > strip > label span.title:hover /* 标签文本 */
+  {
+    color:black;
+  }
+    
+
+  :root > strip > label:current span.title /* 标签文本 */
+  {
+    color:black;
+    border-bottom: 2px solid black;
+  }
+    
+  /* containers of tabs */
+  :root > panels {
+    display: block;
+    size:*; /* 使用剩余所有的空间 */
+    margin-top:10px;
+    overflow:auto;
+  }
+  
+  /* tab containers, MUST have 'name' attribute defined */
+  :root > panels > * { 
+    visibility:none; 
+  }
+  
+  :root > panels > *:expanded { 
+    size:*; 
+    padding:5px;
+    visibility:visible; 
+  }
+}

@@ -1,0 +1,68 @@
+@set vTabs{
+  :root 
+  {
+    font:system;
+    size:*;
+    display:block;
+    flow:horizontal;
+    background: linear-gradient(to top, #767ADD, #886DB1); 
+  }
+  
+  :root > strip /* the tab strip */
+  {
+    display: block;
+    flow: vertical;
+    width: max-content;
+    height: *;
+  }
+  
+  :root > strip > label /* all tab labels, passive by default */
+  {
+    display:block;
+    width:*;
+    padding: 10px;
+    margin: 10px 5px;
+    font-size:20px;
+    text-align:center;
+    color: white;
+    border-radius:3px;
+    background-color:rgba(255,255,255,0.3);
+    transition: background-color linear 100ms;
+  }
+
+  :root > strip > label:hover /* 鼠标经过 */
+  {
+    background:rgba(0,0,0,0.3);   
+  }
+  
+  :root > strip > label:current /*active tab*/
+  {
+    background-color:rgba(255,255,255,0.6);
+  }
+
+  :root > strip > label span.title /* 标签文本 */
+  {
+    display: inline-block;
+    margin-left: 12px;
+  }
+    
+  /* containers of tabs */
+  :root > panels {
+    overflow:auto;
+    display: block;
+    size:*; /* 使用剩余所有的空间 */
+  }
+  
+  /* tab containers, MUST have 'name' attribute defined */
+  :root > panels > * { 
+    visibility:none; 
+    
+  }
+  
+  :root > panels > *:expanded { 
+    size:*; /* 使用剩余所有的空间 */
+    padding:5px;
+    visibility:visible; 
+    background: linear-gradient(-40deg, #8687F3, #BE40D1, #FEA8D7); 
+  }
+}

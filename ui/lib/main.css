@@ -1,0 +1,43 @@
+/**
+html { 
+    var(accent-color): window-accent-color; 
+    border: window-frame-width solid transparent; 
+}
+
+html:owns-focus {
+    border-color: morph(color(accent-color), opacity:50%);   
+}
+
+html[window-state="maximized"] { 
+    border-color:transparent; 
+}
+
+html { 
+    border: window-frame-width solid #4495FE; 
+}
+
+html[window-state="maximized"] { 
+    border-color: transparent; 
+}
+
+**/
+
+html { 
+    border-width:0;
+    height:100%; 
+    width:100%; 
+    margin:0;
+}
+html[window-state="maximized"] { 
+    border: window-frame-width solid transparent; 
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px; 
+    font-family:Consolas, 'Courier New', monospace;
+    color: #172b4d;
+}

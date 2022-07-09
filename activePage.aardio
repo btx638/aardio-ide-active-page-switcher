@@ -1,0 +1,51 @@
+//IDE 文件切换助手
+import win.ui;
+/*DSG{{*/
+mainForm = win.form(text="active page";right=871;bottom=679)
+mainForm.add()
+/*}}*/
+
+mainForm.disableDragFullWindow = true;
+mainForm.enableDpiScaling(false)
+
+import ide;
+import aaz.thread.works;
+
+import aaz.sciterEx;
+import web.sciter.debug; 
+
+var threadWork = aaz.thread.works(
+	5,
+	function( path ) {
+		import ide
+
+		ide.openDocument(path)
+	},
+	1
+);
+
+var wb = aaz.sciterEx(mainForm)
+
+wb.attachEventHandler( web.sciter.debug );	
+
+wb.defineNativeFuntion("add", function(){
+	return ide.getActiveDocPath();
+})
+
+wb.defineNativeFuntion("active", function(path){
+	if(io.exist(path)){
+		threadWork.push(path)
+	}
+})
+
+wb.defineNativeFuntion("splitpath", function(path){
+	var tPath = io.splitpath(path)
+	
+	return {tPath.dir; tPath.name}; 
+})
+
+wb.go("\ui\main.html")
+
+mainForm.show();
+return win.loopMessage();
+

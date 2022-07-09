@@ -1,0 +1,69 @@
+@set titlebar{
+    :root { 
+        flow:horizontal; 
+        width:*; 
+        height:40px; 
+        margin:0; 
+        padding:4px;
+        background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    } 
+    
+    :root > window-caption { 
+        display:block; 
+        line-height:40px; 
+        width:*; 
+        padding:0 1em; 
+        color: black; 
+        text-align:center;
+        font-size:20px;
+        letter-spacing:5px;
+        font-weight:bold;
+    }
+    
+    :root > window-buttons { 
+        display:block; 
+        flow:horizontal; 
+        width:max-content; 
+        height:*; 
+    }
+    
+    :root > window-buttons > window-button { 
+        behavior:clickable; 
+        display:block; 
+        size:35px;
+        border-radius:3px;
+        foreground-size: 11dip;
+        foreground-repeat: no-repeat;
+        foreground-position:50% 50%;
+        margin:5px;
+        stroke: white;
+        stroke-width:2.3dip;
+        background-color:rgba(255,255,255,0.3);
+        transition: background-color linear 100ms;
+    }
+    
+    :root > window-buttons > window-button:hover { 
+        background:rgba(0,0,0,0.25);   
+    }
+    
+    :root > window-buttons > window-button[role="window-close"] { 
+        foreground-image: url(path:M0 0 L10 10 M10 0 L0 10); 
+    }
+    
+    :root > window-buttons > window-button[role="window-close"]:hover { 
+        background:rgb(232,17,35); 
+        stroke:#fff; 
+    }
+    
+    :root > window-buttons > window-button[role="window-maximize"] { 
+        foreground-image: url(path:M0 0 H10 V10 H0 Z); 
+    }
+      
+    :root > window-buttons > window-button[role="window-minimize"] { 
+        foreground-image: url(path:M0 0 M0 5 H10 M10 10); 
+    }
+}
+
+html[window-state="maximized"] header > window-buttons > window-button[role="window-maximize"] { 
+    foreground-image: url(path:M0 2 h8 v8 h-8 Z M2 2 v-2 h8 v8 h-2); 
+}

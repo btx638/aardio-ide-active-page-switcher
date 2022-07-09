@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url("./fontawesome/webfonts/fa-solid-900.ttf"); 
+}
+
+
+/* 容器：水平方向 */
+.aaz-h{
+    display: block;
+    flow:horizontal;
+}
+
+.aaz-h-flow{
+    display: block;
+    flow:horizontal-flow;
+}
+
+/* 容器：垂直方向 */
+.aaz-v{
+    display: block;
+    flow:vertical;
+}
+
+.aaz-v-flow{
+    display: block;
+    flow:vertical-flow;
+}
+
+/* 列表容器 */
+.aaz-list-wrapper{
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px; 
+    /* 要指定 height  max-height  white-space:nowrap 才能产生滚动条 */
+
+}
+
+/* 内容容器 */
+.aaz-list-wrapper > .aaz-list-content{
+    display: block;
+    border-radius:3px;
+    background-color:#ebecf0;
+    overflow-y: auto; 
+}
+
+/* 头部容器 */
+.aaz-list-wrapper > .aaz-list-content > .aaz-list-header{  
+    display: block;
+    min-height: 20px; 
+    padding: 10px 8px; /* 限制头部容器与内容的边距 */
+    font-weight: 600;
+    color: #172b4d;
+}
+
+/* 卡片容器 */
+.aaz-list-wrapper > .aaz-list-content > .aaz-list-cards{
+    display: block;   
+    margin: 0 4px;/* 与外部容器的左右边距 */
+    padding: 0 4px;/* 限制内容距离 */    
+}
+
+/* 子卡片容器 */
+.aaz-list-wrapper > .aaz-list-content > .aaz-list-cards > .aaz-list-card{
+    display: block;
+    margin-bottom: 8px; /* 底部边距 */
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.20);
+    color: #172b4d;
+    /* 还能定义最大宽度，最小高度来限制里面内容 */
+}
+
+/* 子卡片主体内容的容器，真正的内容在此 */
+.aaz-list-wrapper > .aaz-list-content > .aaz-list-cards > .aaz-list-card > .aaz-list-card-details{
+    padding: 6px 8px 2px;
+}
+
+/* 卡片生成器容器 */
+.aaz-list-wrapper > .aaz-list-content > .card-composer-container{
+    display: block;   
+    max-height: 38px;
+    min-height: 38px;
+}
+
+/* 卡片生成器*/
+.aaz-list-wrapper > .aaz-list-content > .card-composer-container > .open-card-composer{
+    display: block;   
+    border-radius: 3px;
+    color: #5e6c84;
+    margin: 2px 0 8px 8px;
+    padding: 4px 8px;
+    text-decoration: none;
+}
+
+.aaz-list-wrapper > .aaz-list-content > .card-composer-container > .open-card-composer:hover{
+    background-color: #091e4214;
+    color: #172b4d;
+}
+
+
+.aaz-button,
+.aaz-big-button{
+    behavior: button;
+    display: inline-block;
+    white-space:nowrap; 
+    margin-right: 12px;
+    padding: 8px 15px;
+    font-size: 15px;
+
+    text-align:center;
+    color: white;
+    border-radius:3px;
+    background-color:rgba(255,255,255,0.3);
+    transition: background-color linear 100ms;
+}
+
+.aaz-big-button:disabled{
+    background-color: #a0cfff;
+}
+
+.aaz-button:hover,
+.aaz-big-button:hover{
+    background:rgba(0,0,0,0.3); 
+}
+
+.aaz-button:active,
+.aaz-big-button:active
+{
+    background-color:rgba(255,255,255,0.6);
+}
+
+.aaz-list-card .aaz-button, .aaz-button.normal{
+    color:black;
+    background-color:rgba(196, 68, 189, 0.3);
+}
+
+.aaz-list-card .aaz-button:hover, .aaz-button.normal:hover{
+    background-color:rgba(196, 68, 190, 0.541);
+}
+
+.aaz-list-card .aaz-button:active, .aaz-button.normal:hover{
+    background-color:rgba(196, 68, 190, 0.781);
+}
+
+.aaz-button[type="popup-menu"]
+{
+    behavior:button popup-menu;
+}
+
+.aaz-big-button
+{ 
+    padding: 20px;  
+    font-size: 20px;   
+    margin-left: 15px;
+}
+
+.aaz-button:tab-focus{
+    border: 1px solid red;
+}
+
+.aaz-text-button
+{
+    behavior: button;
+    display: inline-block;
+    color: #059bd1;
+    text-decoration-line:underline;	
+    cursor: pointer;
+}
+
+.aaz-text-button:hover
+{
+    
+}

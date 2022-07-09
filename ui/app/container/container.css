@@ -1,0 +1,42 @@
+@set container{
+    :root{
+        size:*;
+        background:linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    }
+
+    :root div.file-list{
+        size:*;
+        overflow:auto;
+    }
+
+    :root button[cmd]{
+        font-size:1.5em;
+        margin:5px;
+    }
+
+    :root div.dir{
+        font-size:1.5em;
+        background: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+        border:1px solid black;
+        border-radius:5px;
+        margin:5px;
+        padding:5px;
+    }
+
+    :root li.file-item{
+        behavior:radio;
+        margin:5px;
+        padding:5px;
+        border-radius:5px;
+        font-size:1.5em;
+    }
+
+    :root li.file-item:hover{
+        background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        
+    }
+
+    :root li.file-item:checked{
+        background: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+    }
+}

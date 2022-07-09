@@ -1,0 +1,75 @@
+<html window-frame="solid-with-shadow"
+    window-width="50%"
+    window-height="50%">
+    <head>
+        <title>Test</title>
+        <style src="base.css"></style>
+        <style src="aaz.css"></style>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                overflow: auto;
+            }
+            html > header { 
+                line-height:50px; 
+                height: 50px;
+                background: #DDD8D7; 
+                font:system; 
+                
+            }
+            html > header > caption { 
+                height: *;
+                text-align:center; 
+                color: black;
+                font-size:20px;
+            }
+
+            html > body{
+                background: #F4F5F7; 
+                size:*;
+            }
+            
+            html > body form .item{
+                margin:10px;
+            }
+
+            html > body form input{
+                display:block;
+                line-height:2em; 
+                width:70px;
+            }
+
+            html > body form input[type=text]{
+                width:100px;
+            }
+
+            html > body form .item-name{
+                line-height:2em; 
+                width: 150px;
+                text-align:right;
+            } 
+
+        </style>
+        <script>
+
+            document.body.content(Window.this.parameters.content);
+            if (Window.this.parameters.caption) {
+                document.$("[role=window-caption]").textContent = Window.this.parameters.caption
+            }
+
+
+            Window.this.minSize = [400*devicePixelRatio,300*devicePixelRatio];
+            Window.this.maxSize = [1000*devicePixelRatio,800*devicePixelRatio];
+
+        </script>
+    </head>
+
+    <header>
+      <caption role="window-caption">Window caption</caption>
+    </header>
+
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,6 @@
+@set radio{
+    :root{
+        behavior:radio;
+        display:inline-block;
+    }
+}

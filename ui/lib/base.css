@@ -1,0 +1,164 @@
+/* 垂直滚动条 */
+@set my-v-scrollbar
+{
+ 
+    .prev { display:none; }
+    .next { display:none;  }
+    
+    
+    .base,
+    .next-page, 
+    .prev-page { background:#DADBE2;  }
+    
+    .slider    { background: gray; border-radius:5px; }
+   
+    .base:disabled { background: #aaa;  }
+    
+   
+    .base { width: 8px;  } 
+    .corner { background: transparent; }
+
+/*     .back{
+  
+        width: 18px;
+        border-radius:25px;
+    } */
+} 
+
+/* 水平滚动条 */
+@set my-h-scrollbar
+{
+    .prev { display:none; }
+    .next { display:none;  }
+    
+    .base,
+    .next-page, 
+    .prev-page { background:#DADBE2;  }
+    
+    .slider    { background: gray; border-radius:5px; }
+   
+    .base:disabled { background: #aaa;  }
+       
+    .base { height: 8px;  } 
+    .corner { background: transparent; }
+}
+
+*
+{
+    vertical-scrollbar: my-v-scrollbar;
+    horizontal-scrollbar: my-h-scrollbar;
+}
+
+.table label,
+textarea,
+menu li
+{
+    font-size: 15px;
+}
+
+input[type="number"],
+input[type="text"]
+{
+    height: 2em;
+    font-size: 15px;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+textarea:focus
+{
+    border-color:highlight;
+}
+
+menu 
+{
+    box-shadow: 2px 2px 10px #888888;
+}
+
+menu li
+{
+    padding: 5px 20px;
+    background-color: white;
+}
+
+menu li:hover
+{
+    background-color: #E2E6E9;
+}
+
+menu li:active{
+    background-color: #e2e6e9;
+}
+
+table 
+{ 
+   /*  flow:table-fixed;  *//* 在表格上强制执行固定布局，以避免在增加新行时更改列宽 */
+    size: *;
+    font:system;
+    border:1px solid; 
+    font-size: 15px;
+    padding:0;
+    border-spacing:0;
+    border-collapse: collapse;
+ 
+}
+
+table > tbody 
+{
+    size: *;
+    overflow: auto;  
+}
+
+
+table tr
+{
+    line-height: 2em;
+}
+  
+
+table thead th
+{
+    color:#767676;
+
+}
+
+table tbody td
+{
+    color: black;
+    white-space:normal;
+    word-wrap:break-word;
+    word-break:break-all;        
+}
+
+table th,
+table td 
+{ 
+    border:1px solid; 
+    padding:4px; 
+}
+
+table tbody td.center
+{
+    text-align: center;
+}
+
+table thead tr
+{
+    background-color: #F3F3F4;
+}
+
+table thead th
+{
+    text-align: center;
+}
+
+table tbody > tr:hover
+{
+    background-color: #F5F5F5;
+}
+
+table tbody > tr:checked
+{
+    background-color: #D5EAFF;
+}
+
